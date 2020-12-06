@@ -1,1 +1,746 @@
+/****************
+00. GLOBAL
+*****************/
+
+body, html{
+    font-family: 'Lato', sans-serif;
+    height: 100%;
+    background-color: #000;
+    color: #f5f5f5;
+}
+
+/* Page content */
+#container {
+    min-height: 100%;
+    overflow: auto;
+}
+
+#content{
+    width: 95%;
+    margin: 0 auto;
+}
+
+main{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.content{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+/* Header */
+
+
+.container{
+    max-width: 100%;
+ /*   width: 1200px; */
+}
+
+/* Typograhy */
+
+h1{
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+h3{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h4{
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h5{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin:0;
+    margin-bottom: 30px;
+}
+
+p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+
+nav img{
+    height: 30px;
+}
+
+/* Navigation*/
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    width: 95%;
+    margin: 0 auto;
+  
+}
+
+.nav-ul{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-ul li a{
+    display: inline-block;
+    color: #f5f5f5;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 10px;
+    border: 1px solid #000;
+}
+
+.active{
+    /* background-color: #241040; */
+    /*background-image: linear-gradient(to right,#5a2c86 , #372b82);*/
+   /* background-image: linear-gradient(to right bottom, #3e0c80, #412594, #4339a7, #454cba, #465ecd, #4c64d6, #526ae0, #5870e9, #656aeb, #7364eb, #805deb, #8e54e9);*/
+    background-image: linear-gradient(to right bottom, #3e0c80, #451981, #4c2482, #532e83, #593784, #5a3e87, #5b4589, #5c4c8b, #58528e, #555891, #535e93, #516395);
+    }
+
+nav li a:hover{
+    background-image: linear-gradient(to right bottom, #3e0c80, #451981, #4c2482, #532e83, #593784, #5a3e87, #5b4589, #5c4c8b, #58528e, #555891, #535e93, #516395);
+    opacity: 0.8;
+   /* border: 1px solid #ddd; */
+}
+
+.hamburger{
+    display:none;
+    background-color:transparent;
+    border: 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.hamburger img{
+    height: 20px;
+}
+
+.hamburger:focus{
+    outline: none;
+}
+
+/* breadcrumbs */
+#breadcrumbs{ 
+    padding-top: 20px;
+}
+
+#breadcrumbs a, #breadcrumbs p{
+    display: inline;
+    margin-right: 10px;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 1.1px;
+    color:#ddd;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  #breadcrumbs a:hover{ color: #fff;}
+
+
+
+
+/* Footer */
+
+footer {
+    width: 100%;
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+    height: 150px;
+    /* margin-top: 100px; */
+}
+
+.footer-content{
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.footer-content p{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.social-media ul{
+    padding: 0;
+}
+
+.social-media ul li{
+    list-style: none;
+    display: inline;
+    padding: 10px;
+}
+
+.social-media img{
+    width: 20px;
+    opacity: 0.2;
+}
+.social-media img:hover{
+    opacity: 1.0;
+}
+
+/****************
+1 - HOME
+*****************/
+.number-of-people{
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    background-image: linear-gradient(to right bottom, #3e0c80, #451981, #4c2482, #532e83, #593784, #5a3e87, #5b4589, #5c4c8b, #58528e, #555891, #535e93, #516395);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    text-decoration: none;
+}
+
+.number-of-people:hover{
+    opacity: 0.8;
+}
+
+.number-of-people p{
+    font-weight: 600;
+}
+
+.intro{
+    background-image: url(../img/intro.jpg);
+    background-color: #000;
+    height: 100%;
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+    margin-bottom: 100px;
+}
+
+.intro-content{
+    width: 40%;
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    text-align: center;
+}
+
+.intro-content p{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.more{
+    font-size: 10px;
+    text-decoration: none;
+    text-transform: uppercase;  
+    letter-spacing: 1.3px;
+    text-align: center;
+    padding: 10px 20px;
+    background-image: linear-gradient(to right bottom, #3e0c80, #451981, #4c2482, #532e83, #593784, #5a3e87, #5b4589, #5c4c8b, #58528e, #555891, #535e93, #516395);
+    color: #f5f5f5;
+}
+
+.more:hover{
+    opacity: 0.8;
+}
+
+.launches{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.left, .right{
+    width: 50%;
+    position: relative; 
+}
+
+.launch-content{
+    width: 90%; 
+}
+
+.right .launch-content{
+    margin-left: 50px;
+}
+
+.latest-launch, .next-launch{
+    position: absolute; 
+    bottom: 0px;
+    width: 90%;
+}
+
+.launches img{
+    width: 100%;
+}
+
+.launch-date{
+    font-size: 10px;
+    text-align: center;
+    background-color: #ddd;
+    color: #000;
+    padding: 5px;
+    width: 70px;
+    margin: 20px 0px;
+}
+
+.launch-name{
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.launch-details{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+
+/****************
+2. ABOUT
+*****************/
+
+.about{
+    background-image: url(../img/about.jpg);
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-color: #000;
+    height: 100%;
+}
+
+.about-content{
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    left: 30%;
+}
+
+.quote p{
+    font-size: 18px;
+    font-weight: 400;
+}
+.banner-1{
+    background-color: #0c0c0c;
+}
+.banner-1 .content, .banner-2 .content{
+    width: 45%;
+    margin: 0 auto;
+    padding: 50px 0px;
+}
+
+.milestones{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+
+.milestones.show {
+    display: flex;
+}
+
+.timeline-btn{
+    font-size: 10px;
+    text-decoration: none;
+    text-transform: uppercase;  
+    letter-spacing: 1.3px;
+    text-align: center;
+    padding: 10px 20px;
+    background-image: linear-gradient(to right bottom, #3e0c80, #451981, #4c2482, #532e83, #593784, #5a3e87, #5b4589, #5c4c8b, #58528e, #555891, #535e93, #516395);
+    color: #f5f5f5;
+    border: none;
+    margin-top: 10px;
+}
+
+.timeline-btn:hover{
+    opacity: 0.8;
+}
+
+
+.events{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.timeline{
+    border-left: 1px solid grey;
+    height: 50px;
+    margin: 0 auto;
+    width: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.event-date {
+    font-size: 10px;
+    text-align: center;
+    background-color: #ddd;
+    color: #000;
+    padding: 5px;
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.event-title{
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1.2px;
+}
+
+.event-details{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+    
+
+/****************
+VEHICLES
+*****************/
+.vehicles{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom:200px;
+}
+
+.col{
+    width: 22.5%;
+    margin-right: 2.5%;
+}
+.col img{
+    width: 100%;
+    display: block;
+}
+
+.vehicle-info{
+    width: 100%;
+}
+
+.link {
+    font-size: 10px;
+    text-decoration: none;
+    text-transform: uppercase;  
+    letter-spacing: 1.3px;
+    text-align: center;
+    padding: 10px 20px;
+    background-image: linear-gradient(to right bottom, #3e0c80, #451981, #4c2482, #532e83, #593784, #5a3e87, #5b4589, #5c4c8b, #58528e, #555891, #535e93, #516395);
+    color: #f5f5f5;
+}
+
+
+.link:hover{
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+/****************
+04. CONTACT
+*****************/
+
+form {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.contact{
+    margin-bottom: 30px;
+}
+input, textarea {
+    width: 95%;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #0c0c0c;
+    color: #f5f5f5;
+    border: 0;
+    font-size: 12px;
+
+}
+
+.submit{
+    background-image: linear-gradient(to right bottom, #3e0c80, #451981, #4c2482, #532e83, #593784, #5a3e87, #5b4589, #5c4c8b, #58528e, #555891, #535e93, #516395);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f5f5f5;
+    border: none;
+    width: 100px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-left: 400px;
+}
+
+.submit:hover{
+    opacity: 0.8;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.form-error {
+    display: none;
+    color: #5a3e87;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+/****************
+05. PEOPLE IN SPACE
+*****************/
+
+.space{
+    background-image: url(../img/galaxy.jpg);
+    height: 100%;
+    background-size: cover;
+}
+
+
+.content h1{
+    margin: 0;
+}
+.people-in-space{
+    padding: 50px 0px;
+    color: #fff;
+}
+
+
+
+/*tablet*/
+
+@media screen and (max-width: 1024px){
+
+    .nav-ul{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-ul.show { display: flex;}
+    .hamburger{ display: block;}
+
+
+    /* home page */
+    .number-of-people{ height: 40px;}
+    .number-of-people p{ font-size: 12px;}
+
+    .intro{
+        height:350px;
+        background-position: center ;
+        margin-bottom: 50px;
+        margin-top: -18px;
+    }
+
+    .intro-content{
+        width: 70%;
+        position: relative;
+        top:80px;
+        left: 15%;
+    }
+
+    .launches{
+        padding: 0;
+        width: 95%;
+        margin-bottom: 50px;
+    }
+        
+    .right .launch-content{ margin-left: 20px;}
+
+    .launch-date{
+        font-size: 9px;
+        padding: 3px;
+        margin: 10px 0px;
+    }
+    
+    .launch-name{ font-size: 16px;}
+    
+    .launch-details{font-size: 13px;}
+
+    /* About */
+    .about{
+        height:350px;
+        margin-bottom: 50px;
+    }
+    
+    .about-content{
+        width: 70%;
+        top: 250px;
+        left: 15%;
+    }
+    
+    .banner-1 .content, .banner-2 .content{
+        width: 70%;
+    }
+
+    /* Vehicles */
+    .vehicles{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .col{
+        width: 45%;
+        margin-left: 2%;
+        margin-bottom: 50px;
+    }
+}
+
+/*mobile*/
+@media screen and (max-width: 768px){
+    h1{ font-size: 20px;}
+    
+    h2{ font-size: 18px;}
+    
+    h3{ font-size: 14px;}
+    
+    h4{ font-size: 10px;}
+    
+    h5{ font-size: 12px;}
+    
+    p{ font-size: 12px;}
+    /* home page */
+    .number-of-people{ height: 40px;}
+    .number-of-people p{ font-size: 12px;}
+    
+    .intro{
+        height:250px;
+        margin-bottom: 50px;
+        margin-top: -18px;
+    }
+    
+    .intro-content{
+        width: 80%;
+        top:40px;
+        left: 10%;
+    }
+    
+    .launches{
+        width: 95%;
+        margin-bottom: 20px;
+    }
+
+    .launches img{ display: none;}
+    .left, .right{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .latest-launch, .next-launch{ position: relative;}
+            
+    .right .launch-content{ margin-left: 0;}
+    
+
+    
+    /* About */
+    .about{
+        height:250px;
+        margin-bottom: 50px;
+    }
+        
+    .about-content{
+        position: relative;
+        width: 80%;
+        top: 100px;
+        left: 10px;
+    }
+        
+    .banner-1 .content, .banner-2 .content{
+         width: 80%;
+    }
+
+    .events{ width: 100%;}
+
+    .event-date {
+        font-size: 9px;
+        padding: 3px;
+        margin-bottom: 15px;
+    }
+    
+    .event-title{ font-size: 14px;}
+    
+    .event-details{ font-size: 12px;}
+    
+
+    
+    /* Vehicles */
+    .col{ width: 100%;}
+
+    /* Contact */
+
+    #content{
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    form {
+        width: 100%;
+        padding: 0;
+    }
+
+    .submit{
+        margin-left: 0;
+    }
+
+}
+
 
